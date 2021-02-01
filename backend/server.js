@@ -3,14 +3,18 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const productRoutes = require("./routes/productRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const userRoutes = require("./routes/userRoutes");
+
 dotenv.config();
 connectDB();
 const app = express();
+app.use(express.json());
 
 app.get("/", (req, res) => {
 	res.send("API RUNNING");
 });
 app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
 
 app.use(notFound);
 
