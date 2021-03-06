@@ -1,5 +1,47 @@
+* {
+}
 main {
+	/* background-image: url("backdrop.svg"); */
+	background-size: cover;
+	/* backdrop-filter: opacity(50%); */
 	min-height: 80vh;
+	background-color: rgb(240, 240, 240);
+	color: black !important;
+}
+.jumbotron {
+	background-image: url("header.svg");
+	background-size: cover;
+	height: 350px;
+}
+#genre {
+	color: white;
+}
+.navbar {
+	position: relative;
+	bottom: 32px;
+	background-color: rgb(14, 14, 14) !important;
+}
+.searchBar {
+	width: 200px !important;
+	height: 30px !important;
+}
+.card-img-top {
+	border: 7px solid rgba(0, 0, 0, 0.836);
+	transition: 1s;
+	transform: scale(1.1);
+}
+.card-img-top:hover {
+	transform: scale(1.15);
+	transition: 1s;
+}
+.carousel {
+	width: 100% !important;
+	height: 70%;
+	object-fit: cover;
+}
+.card {
+	background-color: rgba(0, 0, 0, 0) !important;
+	border: none !important;
 }
 h3 {
 	padding: 1rem 0;
@@ -7,6 +49,7 @@ h3 {
 h1 {
 	font-size: 1.8rem;
 	padding: 0.1rem;
+	/* color: white; */
 }
 h2 {
 	font-size: 1.4rem;
