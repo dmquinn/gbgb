@@ -12,13 +12,16 @@ const Products = ({ product }) => {
 
 			<Card.Body>
 				<Link to={`/product/${product._id}`}>
-					<Card.Title as="div">
+					<Card.Title as="h5">
 						<strong>{product.name}</strong>
 					</Card.Title>
 				</Link>
 				<Link to={`/product/${product._id}`}>
-					<Card.Title as="div">
+					<Card.Title as="h6">
 						<strong>{product.brand}</strong>
+					</Card.Title>
+					<Card.Title as="p" className="text-muted">
+						<>{product.category}</>
 					</Card.Title>
 				</Link>
 				<Card.Text as="div">
@@ -27,7 +30,7 @@ const Products = ({ product }) => {
 						text={`${product.numReviews} reviews`}
 					/>
 				</Card.Text>
-				<Card.Text as="h6">${product.price}</Card.Text>
+				<Card.Text as="h6">€{product.price}</Card.Text>
 			</Card.Body>
 		</Card>
 	);

@@ -63,6 +63,7 @@ const App = () => {
 						component={HomeScreen}
 						exact
 					/>
+
 					<Route
 						path="/page/:pageNumber"
 						component={HomeScreen}

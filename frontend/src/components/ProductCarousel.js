@@ -28,9 +28,9 @@ const ProductCarousel = () => {
 						<Image src={product.image} alt={product.name} fluid />
 						<Col md={6} className="offset-6">
 							<Carousel.Caption className="carousel-caption">
-								<h2>
-									{product.name} (${product.price})
-								</h2>
+								<h1>{product.name}</h1>
+								<h3>{product.brand}</h3>
+								<h6>{product.category}</h6>
 							</Carousel.Caption>
 						</Col>
 					</Link>

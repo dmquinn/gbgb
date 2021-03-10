@@ -203,6 +203,30 @@ const products = [
 		rating: 3.5,
 		numReviews: 4,
 	},
+	{
+		name: "Vonegart // ",
+		image: "/images/vonegart.svg",
+		description:
+			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Raleway Into Space",
+		category: "Techno",
+		price: 15.99,
+		countInStock: 10,
+		rating: 3.5,
+		numReviews: 4,
+	},
+	{
+		name: "Figure Fatale // ",
+		image: "/images/fatale.svg",
+		description:
+			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+		brand: "Cri Perdu",
+		category: "Cold Wave",
+		price: 15.99,
+		countInStock: 10,
+		rating: 3.5,
+		numReviews: 4,
+	},
 ];
 
 module.exports = products;

@@ -39,7 +39,6 @@ const Header = () => {
 								<SearchBox history={history} />
 							)}
 						/>
-
 						<Nav className="ml-auto">
 							<LinkContainer to="/cart">
 								<Nav.Link>

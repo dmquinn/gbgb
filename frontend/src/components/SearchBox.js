@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, NavDropdown } from "react-bootstrap";
 
 const SearchBox = ({ history }) => {
-	const [keyword, setKeyword] = useState("");
-	const [genre, setGenre] = useState("");
+	let [keyword, setKeyword] = useState("");
 
-	// console.log("genre", genre);
 	const submitHandler = (e) => {
 		e.preventDefault();
 		if (keyword.trim()) {
@@ -14,12 +12,12 @@ const SearchBox = ({ history }) => {
 			history.push("/");
 		}
 	};
-	const changeHandler = (e) => {
-		console.log("changed", e);
-		setGenre(e);
-		// e.preventDefault();
-		if (!!genre) {
-			history.push(`/search/${genre}`);
+	const changeHandler = (eventKey) => {
+		console.log("line17", eventKey);
+		keyword = eventKey;
+		console.log("line20", keyword);
+		if (keyword.trim()) {
+			history.push(`/search/${keyword}`);
 		} else {
 			history.push("/");
 		}
@@ -44,9 +42,8 @@ const SearchBox = ({ history }) => {
 				title="genre"
 				name="genre"
 				id="genre"
-				key={genre}
+				// key={genre}
 				style={{ color: "white" }}
-				// eventKey={(e) => changeHandler(e.target.value)}
 			>
 				<NavDropdown.Item
 					onSelect={changeHandler}

@@ -10,6 +10,11 @@ const getProducts = asyncHandler(async (req, res) => {
 					$regex: req.query.keyword,
 					$options: "i",
 				},
+		  } && {
+				category: {
+					$regex: req.query.keyword,
+					$options: "i",
+				},
 		  }
 		: {};
 
@@ -20,6 +25,7 @@ const getProducts = asyncHandler(async (req, res) => {
 
 	res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
+
 const getProductById = asyncHandler(async (req, res) => {
 	const product = await Product.findById(req.params.id);
 	if (product) {
