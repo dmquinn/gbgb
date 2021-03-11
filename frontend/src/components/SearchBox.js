@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button, NavDropdown } from "react-bootstrap";
 
 const SearchBox = ({ history }) => {
@@ -11,16 +11,16 @@ const SearchBox = ({ history }) => {
 		} else {
 			history.push("/");
 		}
+		console.log(keyword);
 	};
 	const changeHandler = (eventKey) => {
-		console.log("line17", eventKey);
 		keyword = eventKey;
-		console.log("line20", keyword);
 		if (keyword.trim()) {
 			history.push(`/search/${keyword}`);
 		} else {
 			history.push("/");
 		}
+		console.log(keyword);
 	};
 
 	return (
@@ -42,7 +42,7 @@ const SearchBox = ({ history }) => {
 				title="genre"
 				name="genre"
 				id="genre"
-				// key={genre}
+				key={keyword}
 				style={{ color: "white" }}
 			>
 				<NavDropdown.Item

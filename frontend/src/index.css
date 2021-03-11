@@ -12,6 +12,7 @@ main {
 	background-image: url("header.svg");
 	background-size: cover;
 	height: 350px;
+	border-top: 12px solid rgb(0, 0, 0);
 }
 #genre {
 	color: white;
