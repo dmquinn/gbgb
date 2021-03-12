@@ -19,7 +19,7 @@ const NewsCarousel = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="/images/merchandise.svg"
+					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615559590/milkrecords/merchandise_esbip5.svg"
 					alt="First slide"
 				/>
 				<Carousel.Caption>
@@ -29,7 +29,7 @@ const NewsCarousel = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="/images/bsckr.svg"
+					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615559798/milkrecords/bsckr_q3wkzv.svg"
 					alt="Second slide"
 				/>
 			</Carousel.Item>
