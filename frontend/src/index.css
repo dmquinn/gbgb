@@ -1,24 +1,34 @@
-* {
-}
 main {
 	background-size: cover;
 	min-height: 100vh;
 	color: black !important;
 }
+p {
+	color: white;
+	font-size: 1rem;
+}
 .footer-distributed {
-	background-color: #292c2f;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	background-color: #131313;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
-	font: normal 16px sans-serif;
 	padding: 45px 50px;
+	overflow: hidden;
+	font-family: "Work Sans", sans-serif;
 }
-
+.footer-left {
+	display: flex;
+	flex-direction: row;
+}
 .footer-distributed .footer-left p {
-	color: #8f9296;
+	display: flex;
+	flex-direction: column;
 	font-size: 14px;
 	margin: 0;
+}
+.footer-left a {
+	color: #8f9296;
+	font-size: 0.8rem;
 }
 #genre {
 	color: white;
@@ -38,20 +48,6 @@ main {
 	text-decoration: none;
 	color: inherit;
 	transition: ease 0.25s;
-}
-
-.footer-distributed .footer-links a:before {
-	content: "·";
-	font-size: 20px;
-	left: 0;
-
-	color: #fff;
-	display: inline-block;
-	padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-	content: none;
 }
 
 .footer-distributed .footer-right {
@@ -82,9 +78,14 @@ main {
 .footer-distributed p.footer-links a:hover {
 	opacity: 50%;
 }
-
+.footerRow {
+	overflow: hidden;
+}
+.underline {
+	border-bottom: 1px solid black;
+}
 .jumbotron {
-	background-image: url("header.svg");
+	background-image: url("https://res.cloudinary.com/danielmurphy/image/upload/v1615564267/milkrecords/banner_t1mews.png");
 	background-size: cover;
 	height: 350px;
 	border-top: 12px solid rgb(0, 0, 0);
@@ -137,6 +138,7 @@ main {
 }
 h3 {
 	padding: 1rem 0;
+	color: white;
 }
 h1 {
 	font-size: 1.8rem;
@@ -161,5 +163,8 @@ h2 {
 	}
 	.carouselText {
 		visibility: hidden;
+	}
+	.footer-left {
+		flex-direction: column;
 	}
 }

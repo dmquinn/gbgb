@@ -145,7 +145,7 @@ const products = [
 	{
 		name: "Linus Falladah// ",
 		image:
-			"/https://res.cloudinary.com/danielmurphy/image/upload/v1615559588/milkrecords/janine_qp2s4e.svg",
+			"https://res.cloudinary.com/danielmurphy/image/upload/v1615559588/milkrecords/janine_qp2s4e.svg",
 		description:
 			"Borrowing it's name (sort of) from a story by Scottish Writer Alasdair Gray, this album feels very bit as postmodern and fractured as the novel does.  Falladah adopts a more experimental approach, seemingly allowing the music to lead him in many places, making it feel more like an exploration than a composition",
 		brand: "Janine 1982",

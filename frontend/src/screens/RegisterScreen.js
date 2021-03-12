@@ -39,9 +39,9 @@ const RegisterScreen = ({ location, history }) => {
 			<h1>Sign Up</h1>
 			{error && <Message variant="danger">{message}</Message>}
 			{loading && <Loader />}
-			<Form onSubmit={submitHandler}>
+			<Form onSubmit={submitHandler} className="mt-4">
 				<Form.Group controlId="name">
-					<Form.Label>name</Form.Label>
+					<Form.Label>Name</Form.Label>
 					<Form.Control
 						onChange={(e) => setName(e.target.value)}
 						value={name}
@@ -50,7 +50,7 @@ const RegisterScreen = ({ location, history }) => {
 					></Form.Control>
 				</Form.Group>
 				<Form.Group controlId="email">
-					<Form.Label>EmailAdress</Form.Label>
+					<Form.Label>Email Address</Form.Label>
 					<Form.Control
 						onChange={(e) => setEmail(e.target.value)}
 						value={email}
@@ -60,7 +60,7 @@ const RegisterScreen = ({ location, history }) => {
 				</Form.Group>
 
 				<Form.Group controlId="password">
-					<Form.Label>password</Form.Label>
+					<Form.Label>Password</Form.Label>
 					<Form.Control
 						onChange={(e) => setPassword(e.target.value)}
 						value={password}
@@ -69,7 +69,7 @@ const RegisterScreen = ({ location, history }) => {
 					></Form.Control>
 				</Form.Group>
 				<Form.Group controlId="confirmPassword">
-					<Form.Label>Confirm password</Form.Label>
+					<Form.Label>Confirm Password</Form.Label>
 					<Form.Control
 						onChange={(e) => setConfirmPassword(e.target.value)}
 						value={confirmPassword}
@@ -83,9 +83,10 @@ const RegisterScreen = ({ location, history }) => {
 			</Form>
 			<Row className="py-3">
 				<Col>
-					Have an Account?
+					Have an Account?{" "}
 					<Link
 						to={redirect ? `/login?redirect=${redirect}` : `/login`}
+						className="underline"
 					>
 						Login
 					</Link>

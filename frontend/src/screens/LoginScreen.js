@@ -31,9 +31,9 @@ const LoginScreen = ({ location, history }) => {
 			<h1>Sign In</h1>
 			{error && <Message variant="danger">{error}</Message>}
 			{loading && <Loader />}
-			<Form onSubmit={submitHandler}>
+			<Form onSubmit={submitHandler} className="mt-4">
 				<Form.Group controlId="email">
-					<Form.Label>EmailAdress</Form.Label>
+					<Form.Label>Email Address</Form.Label>
 					<Form.Control
 						onChange={(e) => setEmail(e.target.value)}
 						value={email}
@@ -43,7 +43,7 @@ const LoginScreen = ({ location, history }) => {
 				</Form.Group>
 
 				<Form.Group controlId="password">
-					<Form.Label>password</Form.Label>
+					<Form.Label>Password</Form.Label>
 					<Form.Control
 						onChange={(e) => setPassword(e.target.value)}
 						value={password}
@@ -57,13 +57,14 @@ const LoginScreen = ({ location, history }) => {
 			</Form>
 			<Row className="py-3">
 				<Col>
-					New Customer?
+					New Customer?{" "}
 					<Link
 						to={
 							redirect
 								? `/register?redirect=${redirect}`
 								: `/register`
 						}
+						className="underline"
 					>
 						Register
 					</Link>
