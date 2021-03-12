@@ -27,11 +27,13 @@ const NewsCarousel = () => {
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615559798/milkrecords/bsckr_q3wkzv.svg"
-					alt="Second slide"
-				/>
+				<a href="https://busckr.herokuapp.com/" className="">
+					<img
+						className="d-block w-100"
+						src="https://res.cloudinary.com/danielmurphy/image/upload/v1615559798/milkrecords/bsckr_q3wkzv.svg"
+						alt="Second slide"
+					/>
+				</a>
 			</Carousel.Item>
 		</Carousel>
 	);

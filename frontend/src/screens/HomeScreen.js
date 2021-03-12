@@ -37,9 +37,6 @@ const HomeScreen = ({ match }) => {
 
 	return (
 		<>
-			<Row className="mt-5">
-				<div></div>
-			</Row>
 			{!keyword ? (
 				<ProductCarousel />
 			) : (
@@ -48,7 +45,7 @@ const HomeScreen = ({ match }) => {
 				</Link>
 			)}
 			{!keyword && <h1 className="mt-5">LATEST</h1>}
-			<h1 className="mt-5">{keyword}</h1>
+			<h1 className="mt-3">{keyword}</h1>
 			{loading ? (
 				<Loader />
 			) : error ? (

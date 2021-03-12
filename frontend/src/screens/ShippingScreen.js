@@ -28,7 +28,7 @@ const ShippingScreen = ({ history }) => {
 			<h1>Shipping</h1>
 			<Form onSubmit={submitHandler}>
 				<Form.Group controlId="address">
-					<Form.Label>address</Form.Label>
+					<Form.Label>Address</Form.Label>
 					<Form.Control
 						onChange={(e) => setAddress(e.target.value)}
 						value={address}
@@ -50,7 +50,7 @@ const ShippingScreen = ({ history }) => {
 				</Form.Group>
 
 				<Form.Group controlId="postalCode">
-					<Form.Label>postalCode</Form.Label>
+					<Form.Label>Postal Code</Form.Label>
 					<Form.Control
 						onChange={(e) => setPostalCode(e.target.value)}
 						value={postalCode}
@@ -61,7 +61,7 @@ const ShippingScreen = ({ history }) => {
 				</Form.Group>
 
 				<Form.Group controlId="country">
-					<Form.Label>country</Form.Label>
+					<Form.Label>Country</Form.Label>
 					<Form.Control
 						onChange={(e) => setCountry(e.target.value)}
 						value={country}

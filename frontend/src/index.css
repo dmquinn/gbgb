@@ -95,11 +95,7 @@ p {
 	background-color: black;
 	padding: 20px;
 }
-/* .card-title {
-	color: white;
-	background-color: black;
-	padding: 10px;
-} */
+
 .merchText {
 	font-family: fantasy;
 }
@@ -166,5 +162,11 @@ h2 {
 	}
 	.footer-left {
 		flex-direction: column;
+	}
+	#genre {
+		position: relative;
+		margin-left: -60px !important;
+		margin-bottom: 20px;
+		margin-top: 5px;
 	}
 }
