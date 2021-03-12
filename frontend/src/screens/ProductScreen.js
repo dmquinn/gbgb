@@ -42,7 +42,6 @@ const ProductScreen = ({ history, match }) => {
 
 	useEffect(() => {
 		if (successProductReview) {
-			alert("Review submitted successfully");
 			setRating(0);
 			setComment("");
 			dispatch({ type: PRODUCT_CREATE_REVIEW_RESET });
@@ -83,6 +82,9 @@ const ProductScreen = ({ history, match }) => {
 									<h3>{product.name}</h3>
 								</ListGroup.Item>
 								<ListGroup.Item>
+									<h4>{product.brand}</h4>
+								</ListGroup.Item>
+								<ListGroup.Item>
 									<Rating
 										value={product.rating}
 										text={`${product.numReviews} reviews`}
@@ -92,7 +94,7 @@ const ProductScreen = ({ history, match }) => {
 									Price: €{product.price}
 								</ListGroup.Item>
 								<ListGroup.Item>
-									Description €{product.description}
+									{product.description}
 								</ListGroup.Item>
 							</ListGroup>
 						</Col>

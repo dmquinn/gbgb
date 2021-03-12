@@ -3,7 +3,7 @@ const products = [
 		name: "Bleak Horroscopes // ",
 		image: "/images/bleakhorroscopes.svg",
 		description:
-			"Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working",
+			"The first release from Sheffeild-based self described spooky lads Bleak Horroscopes, dark driven bass over twinkly guitar.  ",
 		brand: "Schraubstock",
 		category: "Cold Wave",
 		price: 19.99,
@@ -15,7 +15,7 @@ const products = [
 		name: "Bleak Horroscopes // ",
 		image: "/images/bleakhorroscopes2.svg",
 		description:
-			"Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life",
+			"A strong follow up to the seminal `Schraubstock`, the band's techno influences can be heard throughout",
 		brand: "Scattered Over Venice",
 		category: "Cold Wave",
 		price: 15.99,
@@ -27,7 +27,7 @@ const products = [
 		name: "улыбаться // ",
 		image: "/images/smile.svg",
 		description:
-			"Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design",
+			"Everything you could need from an industrial record.  Smile delves deep into a well of dischordant machine made noise; obvious influences from predecessors Einsturzende Neubauten and Throbbing Gristle",
 		brand: "Smile",
 		category: "Industrial",
 		price: 19.99,
@@ -39,7 +39,7 @@ const products = [
 		name: "KRMXX // ",
 		image: "/images/tinfoil.svg",
 		description:
-			"The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music",
+			"KRMXX toes the line between minimal and complex beautifuly - the record feels like one cohesive journey from start to finish - think the Four Seasons but with a 909 and a distortion pedal",
 		brand: "Despotism in the Workplace",
 		category: "Techno",
 		price: 10.99,
@@ -51,7 +51,7 @@ const products = [
 		name: "Das Egg // ",
 		image: "/images/dasegg.svg",
 		description:
-			"Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience",
+			"Das Egg shifts towards a more sombre note and away from the established 'death-by-disco' sound with their recent release, the title pointing to potential series in the same vein. ",
 		brand: "Volume I",
 		category: "Ambient",
 		price: 24.99,
@@ -63,7 +63,7 @@ const products = [
 		name: "Transmetropolitan // ",
 		image: "/images/redone.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"The groundbreaking debut from Transmetropolitan sounds like if Talking Heads suddenly had a dramatic goth phase.",
 		brand: "Transmetropolitan",
 		category: "New Wave",
 		price: 17.99,
@@ -75,7 +75,7 @@ const products = [
 		name: "The Lung // ",
 		image: "/images/thelung.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"The album consists mostly of cat noises and nondescript ethereal wooshing for the first twelve minutes or so, but they really pull it together by the third song.",
 		brand: "Here Comes Troubled",
 		category: "New Wave",
 		price: 19.99,
@@ -87,7 +87,7 @@ const products = [
 		name: "Swamphead // ",
 		image: "/images/swamphead.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"This album marks a real departure for Swamphead.  It is a statement of spiritual yearning that might leave fans of the band's earlier confrontational sound confused.",
 		brand: "Songs About Cold Weather",
 		category: "Punk",
 		price: 22.99,
@@ -99,7 +99,7 @@ const products = [
 		name: "Swamphead // ",
 		image: "/images/swamphead2.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"Swamphead II feels like a natural follow-on from their previous release `Songs about Cold Weather.  They revisit some of their earlier antagonistic attitude but retain much of the beauty of the previous record. ",
 		brand: "Swamphead II",
 		category: "Punk",
 		price: 7.99,
@@ -111,7 +111,7 @@ const products = [
 		name: "Linus Falladah // ",
 		image: "/images/linus.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"To say this is an album not to pay attention to is not to discredit it.  It is slow and drawn out and sparse in a way that gradually overwhelms a listener.  Reportedly inspired by Linus' work with a Tibetan choir",
 		brand: "Linus in Furs",
 		category: "Ambient",
 		price: 19.99,
@@ -123,8 +123,8 @@ const products = [
 		name: "Linus Falladah// ",
 		image: "/images/janine.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
-		brand: "Linus in Furs",
+			"Borrowing it's name (sort of) from a story by Scottish Writer Alasdair Gray, this album feels very bit as postmodern and fractured as the novel does.  Falladah adopts a more experimental approach, seemingly allowing the music to lead him in many places, making it feel more like an exploration than a composition",
+		brand: "Janine 1982",
 		category: "Ambient",
 		price: 19.99,
 		countInStock: 7,
@@ -135,7 +135,7 @@ const products = [
 		name: "Ella D. Hanover // ",
 		image: "/images/ella.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"Ella D. Hanover holds no punches with an entirely modular setup.  It is at once raw and ugly and beautiful, and has the characteristics of a single live performance (for which she is of corse famed)",
 		brand: "Maps",
 		category: "Techno",
 		price: 15.99,
@@ -147,9 +147,9 @@ const products = [
 		name: "Ella D. Hanover // ",
 		image: "/images/ella2.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
-		brand: "Techno",
-		category: "Electronics",
+			"Every bit as raw as the first record, an exhausting head battering musical experience. ",
+		brand: "Electronics",
+		category: "Techno",
 		price: 15.99,
 		countInStock: 2,
 		rating: 4,
@@ -159,7 +159,7 @@ const products = [
 		name: "Web Audio Context // ",
 		image: "/images/webaudio.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"Web Audio Context are a band with an axe to grind.  They seem exclusively `anti` and take aim lyrically at just about everything in earshot.",
 		brand: "Burst",
 		category: "Punk",
 		price: 19.99,
@@ -171,7 +171,7 @@ const products = [
 		name: "Web Audio Context // ",
 		image: "/images/webaudio2.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"Exhausting, Lovesick and incredibly angry, Tiger/No feels like a breakup album written for a dethroned despot",
 		brand: "Tiger/No",
 		category: "Punk",
 		price: 12.99,
@@ -183,7 +183,7 @@ const products = [
 		name: "Bengifan // ",
 		image: "/images/bendifan.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"More than just a thumping raver groove, intricate melodies woven into and around the beats keep the music anything but dull. Some of it's most noted cuts are `Helium`, `Sniff`, and `Big Barry's Chant`.",
 		brand: "How Late it Was, How Late",
 		category: "Ambient",
 		price: 15.99,
@@ -195,7 +195,7 @@ const products = [
 		name: "Kellman // ",
 		image: "/images/grand.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"Kellman's stellar debut feels like an action movie somehow.",
 		brand: "The Grand National",
 		category: "Punk",
 		price: 15.99,
@@ -207,7 +207,7 @@ const products = [
 		name: "Vonegart // ",
 		image: "/images/vonegart.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"Originally written and produced as a soundtrack to the ill-fated sci-fi docu-drama `Space Fight`, Raleway Into Space is expansive and, well, spacey.  Featuring the very well-recieved single `A Punch in your Space`.",
 		brand: "Raleway Into Space",
 		category: "Techno",
 		price: 15.99,
@@ -219,7 +219,7 @@ const products = [
 		name: "Figure Fatale // ",
 		image: "/images/fatale.svg",
 		description:
-			"Meet Echo Dot // Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space",
+			"This unique act blends dark-wave with an 80's influence, post-punk era guitars with minimalist poetry in sung Portugese. Figure Fatale is a driving, mesmerizing outburst of sentimental anxiety through the nihilistic mind-frame, it is both personal & broad, like a wondering mind brave enough to question taboo & existence.",
 		brand: "Cri Perdu",
 		category: "Cold Wave",
 		price: 15.99,
