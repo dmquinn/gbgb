@@ -53,6 +53,6 @@ app.get("/api/products/:id", (req, res) => {
 });
 const PORT = process.env.PORT || 5000;
 app.listen(
-	5000,
+	PORT,
 	console.log(`server running in ${process.env.NODE_ENV} on port ${PORT}`)
 );
