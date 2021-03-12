@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
 	return (
-		<footer className="footer-distributed">
+		<footer className="footer-distributed mt-4">
 			<Col>
 				<div className="footer-right">
 					<a href="#">
@@ -52,7 +52,7 @@ const Footer = () => {
 					</p>
 				</Col>
 			</div>
-			<p className="mt-5">Milk Records &copy; 2021</p>
+			<p className="mt-5">Daniel Murphy // Milk Records &copy; 2021</p>
 		</footer>
 	);
 };

@@ -169,4 +169,7 @@ h2 {
 		margin-bottom: 20px;
 		margin-top: 5px;
 	}
+	.card-img-top:hover {
+		transform: none;
+	}
 }

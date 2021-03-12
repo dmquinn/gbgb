@@ -19,7 +19,7 @@ const NewsCarousel = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
-					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615559590/milkrecords/merchandise_esbip5.svg"
+					src="https://res.cloudinary.com/danielmurphy/image/upload/v1615569065/milkrecords/merch_fgth30.svg"
 					alt="First slide"
 				/>
 				<Carousel.Caption>
