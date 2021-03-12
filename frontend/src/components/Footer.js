@@ -52,7 +52,9 @@ const Footer = () => {
 					</p>
 				</Col>
 			</div>
-			<p className="mt-5">Daniel Murphy // Milk Records &copy; 2021</p>
+			<p className="mt-5 copyright">
+				Daniel Murphy // Milk Records &copy; 2021
+			</p>
 		</footer>
 	);
 };
