@@ -2,96 +2,81 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import {
-	Navbar,
-	Nav,
-	Container,
-	NavDropdown,
-	Jumbotron,
-} from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import SearchBox from "./SearchBox";
-import DropdownMenu from "./DropdownMenu";
-
+import logo from "../logo.png";
 import { logout } from "../actions/userActions";
 
 const Header = () => {
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-	const userLogin = useSelector((state) => state.userLogin);
-	const { userInfo } = userLogin;
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
 
-	const logoutHandler = () => {
-		dispatch(logout());
-	};
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
 
-	return (
-		<header>
-			<Jumbotron className="jumbotron"></Jumbotron>
-			<Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
-				<Container>
-					<LinkContainer to="/">
-						<Navbar.Brand>MILK RECORDS</Navbar.Brand>
-					</LinkContainer>
-					<Navbar.Toggle aria-controls="basic-navbar-nav" />
-					<Navbar.Collapse id="basic-navbar-nav">
-						<Route
-							render={({ history }) => (
-								<SearchBox history={history} />
-							)}
-						/>
-						<Nav className="ml-auto">
-							<LinkContainer to="/cart">
-								<Nav.Link>
-									<i className="fas fa-shopping-cart"></i>{" "}
-									Cart
-								</Nav.Link>
-							</LinkContainer>
-							{userInfo ? (
-								<NavDropdown
-									title={userInfo.name}
-									id="username"
-								>
-									<LinkContainer to="/profile">
-										<NavDropdown.Item>
-											Profile
-										</NavDropdown.Item>
-									</LinkContainer>
-									<NavDropdown.Item onClick={logoutHandler}>
-										Logout
-									</NavDropdown.Item>
-								</NavDropdown>
-							) : (
-								<LinkContainer to="/login">
-									<Nav.Link>
-										<i className="fas fa-user"></i> Sign In
-									</Nav.Link>
-								</LinkContainer>
-							)}
-							{userInfo && userInfo.isAdmin && (
-								<NavDropdown title="Admin" id="adminmenu">
-									<LinkContainer to="/admin/userlist">
-										<NavDropdown.Item>
-											Users
-										</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to="/admin/productlist">
-										<NavDropdown.Item>
-											Products
-										</NavDropdown.Item>
-									</LinkContainer>
-									<LinkContainer to="/admin/orderlist">
-										<NavDropdown.Item>
-											Orders
-										</NavDropdown.Item>
-									</LinkContainer>
-								</NavDropdown>
-							)}
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
-		</header>
-	);
+  return (
+    <>
+      <div className="bannerContainer">
+        <h1 className="position-absolute bottom-0 end-0 bannerText">
+          Rubber Fun For Everyone
+        </h1>
+      </div>
+      <Navbar expand="lg" collapseOnSelect>
+        <LinkContainer to="/">
+          <Navbar.Brand className="">
+            <img
+              src="https://i.etsystatic.com/isla/3318ea/44013868/isla_280x280.44013868_ios2rfkb.jpg?version=0"
+              alt=""
+              className="logo ml-lg-5"
+            />
+          </Navbar.Brand>
+        </LinkContainer>
+        <img src={logo} alt="" className="logotext offset-lg-1" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <LinkContainer to="/cart">
+              <Nav.Link className="text-dark">
+                <i className="fas fa-shopping-cart fa-2x"></i> Cart
+              </Nav.Link>
+            </LinkContainer>
+            {userInfo ? (
+              <NavDropdown title={userInfo.name} id="username">
+                <LinkContainer to="/profile">
+                  <NavDropdown.Item>Profile</NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Item onClick={logoutHandler}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            ) : (
+              <LinkContainer to="/login">
+                <Nav.Link className="text-dark">
+                  <i className="fas fa-user fa-2x"></i> Sign In
+                </Nav.Link>
+              </LinkContainer>
+            )}
+            {userInfo && userInfo.isAdmin && (
+              <NavDropdown title="Admin" id="adminmenu">
+                <LinkContainer to="/admin/userlist">
+                  <NavDropdown.Item>Users</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/admin/productlist">
+                  <NavDropdown.Item>Products</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/admin/orderlist">
+                  <NavDropdown.Item>Orders</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </>
+  );
 };
 
 export default Header;
