@@ -34,10 +34,7 @@ const productSchema = mongoose.Schema(
       type: [String],
       required: false,
     },
-    brand: {
-      type: String,
-      required: true,
-    },
+
     category: {
       type: String,
       required: true,

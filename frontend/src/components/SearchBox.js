@@ -13,15 +13,6 @@ const SearchBox = ({ history }) => {
     }
     console.log(keyword);
   };
-  const changeHandler = (eventKey) => {
-    keyword = eventKey;
-    if (keyword.trim()) {
-      history.push(`/search/${keyword}`);
-    } else {
-      history.push("/");
-    }
-    console.log(keyword);
-  };
 
   return (
     <>
@@ -30,8 +21,8 @@ const SearchBox = ({ history }) => {
           type="text"
           name="q"
           onChange={(e) => setKeyword(e.target.value)}
-          placeholder="Search Products..."
-          className="searchBar ml-4"
+          placeholder="Search"
+          className="ml-5 w-50"
         ></Form.Control>
         <Button type="submit" className="p-2 searchButton">
           <i className="fas fa-search"></i>

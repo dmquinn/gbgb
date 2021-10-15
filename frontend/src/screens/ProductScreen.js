@@ -10,7 +10,6 @@ import {
   Button,
   Form,
 } from "react-bootstrap";
-import ImageGallery from "react-image-gallery";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import Rating from "../components/Rating";
@@ -24,7 +23,7 @@ const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
-
+  const [mainImage, setMainImage] = useState("");
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -35,9 +34,7 @@ const ProductScreen = ({ history, match }) => {
   const productReviewCreate = useSelector((state) => state.productReviewCreate);
   const { error: errorProductReview, success: successProductReview } =
     productReviewCreate;
-  useEffect(() => {
-    console.log("product", product.carousel);
-  });
+
   useEffect(() => {
     if (successProductReview) {
       setRating(0);
@@ -54,12 +51,6 @@ const ProductScreen = ({ history, match }) => {
     e.preventDefault();
     dispatch(createProductReview(match.params.id, { rating, comment }));
   };
-  const carousel = product.carousel;
-  // useEffect(() => {
-  //   carousel.map((image, i) => {
-  //     console.log("this", image);
-  //   });
-  // });
 
   return (
     <>
@@ -74,17 +65,35 @@ const ProductScreen = ({ history, match }) => {
         <>
           <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+              <div className="magnifierWrapper">
+                <div
+                  style={{
+                    backgroundImage: mainImage
+                      ? `url(${mainImage})`
+                      : `url(${product.image})`,
+                  }}
+                  src={mainImage ? mainImage : product.image}
+                  alt={product.name}
+                  fluid
+                  className="productPageImage"
+                />
+              </div>
               <Row>
-                <Col md={6}>
+                <Col md={12}>
                   {!!product.carousel && (
                     <Row>
-                      <Col md={6}>
-                        <Image src={product.carousel[0]} className="thumb" />
-                      </Col>
-                      <Col md={6}>
-                        <Image src={product.carousel[1]} className="thumb" />
-                      </Col>{" "}
+                      {product.carousel.map((img, i) => {
+                        return (
+                          <Col>
+                            {" "}
+                            <Image
+                              src={img}
+                              className="thumb mt-2"
+                              onMouseEnter={() => setMainImage(img)}
+                            />
+                          </Col>
+                        );
+                      })}
                     </Row>
                   )}
                 </Col>
@@ -136,6 +145,7 @@ const ProductScreen = ({ history, match }) => {
                         <Col>Quantity</Col>
                         <Col>
                           <Form.Control
+                            className="text-right"
                             as="select"
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}

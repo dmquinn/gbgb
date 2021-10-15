@@ -23,13 +23,19 @@ import OrderListScreen from "./screens/OrderListScreen";
 const App = () => {
   return (
     <Router>
+      <div className="bannerContainer">
+        <h1 className="position-absolute bottom-0 end-0 bannerText">
+          Rubber Fun For Everyone
+        </h1>
+      </div>
       <Header />
+
       <main>
         <Row className="w-100 d-flex justify-content-center">
           <Col md={2}>
             <Sidebar />
           </Col>
-          <Col md={10}>
+          <Col sm={12} md={10}>
             <Route path="/shipping" component={ShippingScreen} />
             <Route path="/payment" component={PaymentScreen} />
             <Route path="/placeOrder" component={PlaceOrderScreen} />

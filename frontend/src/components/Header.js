@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
@@ -16,14 +16,11 @@ const Header = () => {
   const logoutHandler = () => {
     dispatch(logout());
   };
-
+  useEffect(() => {
+    console.log(userInfo);
+  }, [userInfo]);
   return (
     <>
-      <div className="bannerContainer">
-        <h1 className="position-absolute bottom-0 end-0 bannerText">
-          Rubber Fun For Everyone
-        </h1>
-      </div>
       <Navbar expand="lg" collapseOnSelect>
         <LinkContainer to="/">
           <Navbar.Brand className="">
@@ -44,8 +41,12 @@ const Header = () => {
               </Nav.Link>
             </LinkContainer>
             {userInfo ? (
-              <NavDropdown title={userInfo.name} id="username">
-                <LinkContainer to="/profile">
+              <NavDropdown
+                title={userInfo.name}
+                id="username"
+                className="mt-2 mr-5"
+              >
+                <LinkContainer to="/profile" className="mr-5">
                   <NavDropdown.Item>Profile</NavDropdown.Item>
                 </LinkContainer>
                 <NavDropdown.Item onClick={logoutHandler}>
