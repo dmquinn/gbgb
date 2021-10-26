@@ -19,7 +19,7 @@ const Sidebar = (props) => {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item className="link offset-3 p-2">
-          <Nav.Link eventKey="link-2">Accessories</Nav.Link>
+          <Nav.Link href="/search/accessories">Accessories</Nav.Link>
         </Nav.Item>
         <Nav.Item className="link offset-3 p-2 border-bottom">
           <Nav.Link eventKey="link-2">Cool Shit</Nav.Link>
